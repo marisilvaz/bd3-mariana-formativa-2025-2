@@ -15,4 +15,4 @@ use(database);
 */
 
 /* EXCLUIR UM ARQUIVO NO MONGODB: */
-db[Livraria].deleteOne({codigo:'1'});
+db["Livraria"].deleteOne({codigo:'1'});

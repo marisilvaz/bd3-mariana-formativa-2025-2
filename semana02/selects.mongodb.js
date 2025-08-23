@@ -8,7 +8,7 @@ const collection = 'Livraria';
 use(database);
 
 /* SELECIONA OS DADOS DE TODOS OS ARQUIVOS SEM CRITÉRIO: */
-db['Livraria'].find();
+// db['Livraria'].find();
 
 /* SELECIONA ARQUIVOS COM DADOS DE ACORDO COM A CATEGORIA DEFINIDA: */
 // db['Livraria'].find({"categoria": "Fantasia Heroica" });
@@ -16,4 +16,6 @@ db['Livraria'].find();
 /* SELECIONA ARQUIVOS COM DADOS DE ACORDO COM A CATEGORIA DEFINIDA E OCULTANDO CERTOS CAMPOS: */
 // db['Livraria'].find({"categoria": "Fantasia Heroica"}, {"_id":0, "codigo":0, "descricao":0});
 
+/* SELECIONA ARQUIVOS QUE CONTENHAM UMA INCIDENCIA ESPECÍFICA DE TEXTO */
+db['Livraria'].find({"descricao":/robô/i}); //colocar o i no final para não ser ter diferença entre maiscula e miniscula
 
